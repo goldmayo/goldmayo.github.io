@@ -5,7 +5,7 @@ import { DiscordIcon, GithubIcon, NotionIcon } from "@utils/icons";
 
 export const Head: HeadFC = () => (
   <>
-    <title>Home Page</title>
+    <title>현승재 | 프론트엔드 개발자</title>
   </>
 );
 
@@ -17,15 +17,15 @@ const IndexPage: React.FC<PageProps> = () => {
     <div className="max-w-[1100px] mx-auto py-0 px-8">
       <header className="mt-4 mb-8">
         <div className="flex items-center justify-between">
-          <a href="/" className="mr-auto text-headline2">
+          <a href="/" className="mr-auto mobile:text-headline3 text-headline2">
             <h1>
               <span className="text-primary ">&lt;</span>
               <span className="font-semibold text-headline ">HyunSJ</span>
               <span className="text-primary ">&#47;&gt;</span>
             </h1>
           </a>
-          <nav className="">
-            <ul className="flex text-headline3">
+          <nav className="text-headline3 mobile:text-subtitle2">
+            <ul className="flex ">
               <li className="px-2 py-1">
                 <a href=""></a>
                 <span>About</span>
@@ -43,13 +43,11 @@ const IndexPage: React.FC<PageProps> = () => {
         </div>
       </header>
       <main className="flex flex-col gap-12">
-        <section className="">
-          <h1 className="text-headline2">📋 현승재 | 성장하고 싶은 개발자</h1>
-        </section>
+        <h1 className="mx-auto text-headline2 mobile:text-headline3">📋 현승재 | 성장하고 싶은 개발자</h1>
 
-        <section className="">
-          <p className="p-4 my-2 rounded-md text-body bg-stone-200">
-            👋안녕하세요! 유연한 설계와 개선점을 찾는 프론트엔드 개발자 현승재 입니다.
+        <section className="text-body mobile:text-small">
+          <p className="p-4 my-2 rounded-md bg-stone-200">
+            👋안녕하세요! 유연한 설계와 개선점을 찾는 프론트엔드 개발자 현승재입니다.
           </p>
           <pre className="">
             <code className="rounded-md language-javascript">
@@ -87,8 +85,10 @@ const IndexPage: React.FC<PageProps> = () => {
         <hr />
         <section>
           <h2 className="my-3 font-semibold text-orange-600 text-headline3">Introduce.</h2>
-          <ul className="px-2 list-disc list-inside">
-            <li className="">디자인 시스템과 아토믹 디자인 패턴을 적용한 풀스택 개발 경험이 있습니다.</li>
+          <ul className="px-2 ml-6 list-disc list-inside -indent-6 [&>li]:my-2">
+            <li className="">
+              <span>디자인 시스템과 아토믹 디자인 패턴을 적용한 풀스택 개발 경험이 있습니다.</span>
+            </li>
             <li className="">
               <span className="">
                 프론트엔드 개발자가 된 이유는 사용자의 UI/UX를 고려하는 개발에 관심이 있기 때문입니다. 어떤 사업에서도
@@ -97,8 +97,10 @@ const IndexPage: React.FC<PageProps> = () => {
               </span>
             </li>
             <li className="">
-              유연하고 컴포넌트 설계와 자동화된 테스트, 모니터링 시스템을 구축 및 전파할 수 있는 개발자가 되는 것이
-              목표입니다.
+              <span>
+                유연하고 컴포넌트 설계와 자동화된 테스트, 모니터링 시스템을 구축 및 전파할 수 있는 개발자가 되는 것이
+                목표입니다.
+              </span>
             </li>
           </ul>
         </section>
@@ -107,61 +109,66 @@ const IndexPage: React.FC<PageProps> = () => {
           <h2 className="my-3 font-semibold text-orange-600 text-headline3">Skill.</h2>
           <section>
             <h3 className="px-1 py-1 font-semibold bg-amber-100 text-subtitle2">Language</h3>
-            <ul className="flex p-2 list-disc list-inside">
-              <li></li>
-              <div className="flex flex-col gap-2">
-                <p className="">Javascript, Typescript</p>
-                <p className="">JS의 언어적 특징과 ES6 문법을 충분히 이해하고 활용할 수 있습니다.</p>
-                <p className="">TS의 타입 시스템을 활용해 JS의 느슨한 타입이 야기하는 문제를 해결할 수 있습니다.</p>
-              </div>
+            <ul className="flex p-2 ml-6 list-disc list-inside -indent-6">
+              <li>
+                <span>
+                  Javascript, Typescript
+                  <br />
+                  JS의 언어적 특징과 ES6 문법을 충분히 이해하고 활용할 수 있습니다.
+                  <br />
+                  TS의 타입 시스템을 활용해 JS의 느슨한 타입이 야기하는 문제를 해결할 수 있습니다.
+                </span>
+              </li>
             </ul>
           </section>
           <section>
             <h3 className="px-1 py-1 font-semibold bg-amber-100 text-subtitle2">Framework</h3>
-            <ul className="flex p-2 list-disc list-inside">
-              <li></li>
-              <div className="flex flex-col gap-2">
-                <p className="">NextJS</p>
-                <p className="">
+            <ul className="flex p-2 ml-6 list-disc list-inside -indent-6">
+              <li>
+                <span>
+                  NextJS
+                  <br />
                   SPA, SSR, SSG, ISG의 차이를 이해하고 있으며 NextJS가 가지고 있는 장점을 이해하고 있습니다.
-                </p>
-              </div>
+                </span>
+              </li>
             </ul>
           </section>
           <section>
             <h3 className="px-1 py-1 font-semibold bg-amber-100 text-subtitle2">State Mangement</h3>
-            <ul className="flex p-2 list-disc list-inside">
-              <li></li>
-              <div className="flex flex-col gap-2">
-                <p className="">Redux, Zustand</p>
-                <p className="">redux-toolkit과 Zustand에 Ducks패턴과 Slice패턴을 적용한 경험이 있습니다.</p>
-              </div>
+            <ul className="flex p-2 ml-6 list-disc list-inside -indent-6">
+              <li>
+                <span>
+                  Redux, Zustand
+                  <br />
+                  redux-toolkit과 Zustand에 Ducks패턴과 Slice패턴을 적용한 경험이 있습니다.
+                </span>
+              </li>
             </ul>
           </section>
           <section>
             <h3 className="px-1 py-1 font-semibold bg-amber-100 text-subtitle2">ETC</h3>
-            <ul className="flex flex-col gap-2 p-2 list-disc list-inside">
-              <div className="flex">
-                <li></li>
-                <div className="flex flex-col gap-2">
-                  <p>GraphQL</p>
-                  <p className="">GraphQL이 갖는 장단점을 충분히 이해하고 있습니다.</p>
-                </div>
-              </div>
-              <div className="flex">
-                <li></li>
-                <div className="flex flex-col gap-2">
-                  <p>REST API</p>
-                  <p className="">RESTful의 의미를 이해하고 있고 간단히 사용한 경험이 있습니다.</p>
-                </div>
-              </div>
-              <div className="flex">
-                <li></li>
-                <div className="flex flex-col gap-2">
-                  <p>Github</p>
-                  <p className="">프로젝트를 진행하는데 필요한 환경을 구축할 수 있습니다.</p>
-                </div>
-              </div>
+            <ul className="flex flex-col gap-2 p-2 ml-6 list-disc list-inside -indent-6 [&_span]:relative [&_span]:-left-2">
+              <li>
+                <span>
+                  GraphQL
+                  <br />
+                  GraphQL이 갖는 장단점을 충분히 이해하고 있습니다.
+                </span>
+              </li>
+              <li>
+                <span>
+                  REST API
+                  <br />
+                  RESTful의 의미를 이해하고 있고 간단히 사용한 경험이 있습니다.
+                </span>
+              </li>
+              <li>
+                <span>
+                  Github
+                  <br />
+                  프로젝트를 진행하는데 필요한 환경을 구축할 수 있습니다.
+                </span>
+              </li>
             </ul>
           </section>
         </section>
@@ -169,7 +176,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <section className="flex flex-col gap-8">
           <h2 className="my-3 font-semibold text-orange-600 text-headline3">Project Experience.</h2>
           <article className="flex flex-col gap-3">
-            <h2 className="font-medium text-subtitle">
+            <h2 className="font-semibold text-subtitle mobile:text-subtitle2 text-secondary">
               <a href="https://github.com/goldmayo/allcamp-graphql-client">
                 All Camping 올캠핑 Client (2022.08.13 ~ 2022.12.02)
               </a>
@@ -194,11 +201,9 @@ const IndexPage: React.FC<PageProps> = () => {
               </li>
             </ul>
             <div className="flex justify-between">
-              <span className="">
-                <strong>담당 업무</strong>
-              </span>
+              <span className="">담당 업무</span>
               <div className="w-3/4">
-                <ul className="px-2 list-disc list-inside">
+                <ul className="px-2 ml-6 list-disc list-inside -indent-6">
                   <li className="">Tailwindcss를 통한 디자인 시스템을 적용한 반응형 레이아웃 구현</li>
                   <li className="">Figma를 사용하여 목업 및 디자인 시스템 설정</li>
                   <li className="">Atomic design 패턴의 컴포넌트 설계와 Storybook 작성</li>
@@ -215,11 +220,9 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
 
             <div className="flex justify-between">
-              <p className="">
-                <strong>사용 기술</strong>
-              </p>
+              <span className="">사용 기술</span>
               <div className="w-3/4">
-                <ul className="px-2 list-disc list-inside">
+                <ul className="px-2 ml-6 list-disc list-inside -indent-6">
                   <li className="">
                     NextJS, React, TypeScript, Zustand, Storybook, GraphQL, TailwindCss, Figma, context API
                   </li>
@@ -228,10 +231,8 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
 
             <div className="">
-              <p className="">
-                <strong>프로젝트를 진행하며 경험하고 체득한 부분</strong>
-              </p>
-              <ul className="flex flex-col gap-2 px-2 list-disc list-inside">
+              <span className="font-semibold">프로젝트를 진행하며 경험하고 체득한 부분</span>
+              <ul className="flex flex-col gap-2 px-2 ml-6 list-disc list-inside -indent-6">
                 <li className="">Zustand를 사용하여 전역 스토어에 slice 패턴과 ducks패턴을 적용했습니다.</li>
                 <li className="">
                   디자인 시스템과 아토믹 디자인 패턴 그리고 storybook을 적용하여 디자인 수정 작업에 일관된 의사소통을
@@ -248,18 +249,16 @@ const IndexPage: React.FC<PageProps> = () => {
           </article>
           <hr />
           <article className="flex flex-col gap-3">
-            <h2 className="font-medium text-subtitle">
+            <h2 className="font-semibold text-subtitle mobile:text-subtitle2 text-secondary">
               <a href="https://github.com/goldmayo/allcamp-graphql-service">
                 All Camping 올캠핑 Server (2022.07.06 ~ 2022.11.22)
               </a>
             </h2>
             <p className="text-small">한국관광공사 고캠핑 api활용 전국의 캠핑장 정보 제공 개인 프로젝트</p>
             <div className="flex justify-between">
-              <span className="">
-                <strong>담당 업무</strong>
-              </span>
+              <span className="">담당 업무</span>
               <div className="w-3/4">
-                <ul className="px-2 list-disc list-inside">
+                <ul className="px-2 ml-6 list-disc list-inside -indent-6">
                   <li className="">Spring 쿼츠 스케줄러를 사용한 캠핑장 정보 api 호출 및 Bulk Insert로 DB에 저장</li>
                   <li className="">GraphQL Resolver 구현 및 Query설계</li>
                   <li className="">Querydsl을 사용한 동적 검색 쿼리 구현</li>
@@ -267,45 +266,36 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
             </div>
             <div className="flex justify-between">
-              <span className="">
-                <strong>사용 기술</strong>
-              </span>
+              <span className="">사용 기술</span>
               <div className="w-3/4">
-                <ul className="px-2 list-disc list-inside">
+                <ul className="px-2 ml-6 list-disc list-inside -indent-6">
                   <li className="">SpringBoot, Java, JPA, Querydsl GraphQL, MariaDB</li>
                 </ul>
               </div>
             </div>
+            <span className="font-semibold">프로젝트를 진행하며 경험하고 체득한 부분</span>
             <div className="">
-              <p className="">
-                <strong>프로젝트를 진행하며 경험하고 체득한 부분</strong>
-              </p>
-              <div className="indented">
-                <ul className="flex flex-col gap-2 px-2 list-disc list-inside">
-                  <li className="">
-                    스케줄러를 통한 외부 api호출부터 수신한 데이터를 DB에 저장하기 까지의 과정의 환경 구축을
-                    경험했습니다.
-                  </li>
-                  <li className="">Querydsl과 JPA를 적용해 동적 검색 구현을 경험했습니다.</li>
-                  <li className="">Relay-cursor-base 페이지네이션 구현을 경험했습니다 .</li>
-                </ul>
-              </div>
+              <ul className="flex flex-col gap-2 px-2 ml-6 list-disc list-inside -indent-6">
+                <li className="">
+                  스케줄러를 통한 외부 api호출부터 수신한 데이터를 DB에 저장하기 까지의 과정의 환경 구축을 경험했습니다.
+                </li>
+                <li className="">Querydsl과 JPA를 적용해 동적 검색 구현을 경험했습니다.</li>
+                <li className="">Relay-cursor-base 페이지네이션 구현을 경험했습니다 .</li>
+              </ul>
             </div>
           </article>
           <hr />
 
           <article className="flex flex-col gap-3">
-            <h2 className="font-medium text-subtitle">
+            <h2 className="font-semibold text-subtitle mobile:text-subtitle2 text-secondary">
               <a href="https://github.com/goldmayo/IGOBADA">IGOBADA 이고바다 (2022.02.14 ~ 2023.01.19)</a>
             </h2>
             <p className="text-small">웹 명함관리 개인 프로젝트</p>
 
             <div className="flex justify-between">
-              <span className="">
-                <strong>담당 업무</strong>
-              </span>
+              <span className="">담당 업무</span>
               <div className="w-3/4">
-                <ul className="px-2 list-disc list-inside">
+                <ul className="px-2 ml-6 list-disc list-inside -indent-6">
                   <li className="">Firebase를 통한 Google, Github 소셜 로그인 및 회원가입</li>
                   <li className="">전역 상태 스토어 도입 및 관리</li>
                   <li className="">명함 CRUD 정렬 및 인덱싱</li>
@@ -314,21 +304,17 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
             </div>
             <div className="flex justify-between">
-              <span className="">
-                <strong>사용 기술</strong>
-              </span>
+              <span className="">사용 기술</span>
               <div className="w-3/4">
-                <ul className="px-2 list-disc list-inside">
+                <ul className="px-2 ml-6 list-disc list-inside -indent-6">
                   <li className="">React, Firebase, Typescript, Redux-toolkit</li>
                 </ul>
               </div>
             </div>
             <div className="">
-              <p className="">
-                <strong>프로젝트를 진행하며 경험하고 체득한 부분</strong>
-              </p>
+              <span className="font-semibold">프로젝트를 진행하며 경험하고 체득한 부분</span>
               <div className="indented">
-                <ul className="flex flex-col gap-2 px-2 list-disc list-inside">
+                <ul className="flex flex-col gap-2 px-2 ml-6 list-disc list-inside -indent-6">
                   <li className="">redux-toolkit을 사용하여 slice 패턴과 ducks패턴을 적용할 수 있었습니다.</li>
                   <li className="">
                     라이트하우스의 평가 지표인 주요 콘텐츠 로드 시간을 렌더링 성능 최적화 방법을 적용하여 개선할 수
@@ -340,7 +326,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </article>
           <hr />
           <article className="flex flex-col gap-3">
-            <h2 className="font-medium text-subtitle">
+            <h2 className="font-semibold text-subtitle mobile:text-subtitle2 text-secondary">
               <a href="https://github.com/goldmayo/JAVIC_2021">JAVIC 자빅 (2021.10.22 ~ 2021.12.24)</a>
             </h2>
             <span className="text-small">
@@ -350,11 +336,9 @@ const IndexPage: React.FC<PageProps> = () => {
               에 React를 도입한 프로젝트
             </span>
             <div className="flex justify-between">
-              <span className="">
-                <strong>담당 업무</strong>
-              </span>
+              <span className="">담당 업무</span>
               <div className="w-3/4">
-                <ul className="px-2 list-disc list-inside">
+                <ul className="px-2 ml-6 list-disc list-inside -indent-6">
                   <li className="">
                     기존 Jquery로 개발한 프론트엔드를 React와 Context API를 사용하여 component화 하여 재사용 가능한 Flux
                     아키텍처로 리팩토링 및 다크모드 지원
@@ -363,21 +347,17 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
             </div>
             <div className="flex justify-between">
-              <span className="">
-                <strong>사용 기술</strong>
-              </span>
+              <span className="">사용 기술</span>
               <div className="w-3/4">
-                <ul className="px-2 list-disc list-inside">
+                <ul className="px-2 ml-6 list-disc list-inside -indent-6">
                   <li className="">React, Python, Flask</li>
                 </ul>
               </div>
             </div>
             <div className="">
-              <p className="">
-                <strong>프로젝트를 진행하며 경험하고 체득한 부분</strong>
-              </p>
+              <span className="font-semibold">프로젝트를 진행하며 경험하고 체득한 부분</span>
               <div className="indented">
-                <ul className="flex flex-col gap-2 px-2 list-disc list-inside">
+                <ul className="flex flex-col gap-2 px-2 ml-6 list-disc list-inside -indent-6">
                   <li className="">context api를 사용하여 props drilling을 해결한 경험을 하였습니다. </li>
                   <li className="">재사용성을 고려한 react 컴포넌트 개발을 경험할 수 있었습니다.</li>
                 </ul>
