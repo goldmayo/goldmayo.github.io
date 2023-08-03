@@ -87,7 +87,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <h2 className="my-3 font-semibold text-orange-600 text-headline3">Introduce.</h2>
           <ul className="px-2 ml-6 list-disc list-inside -indent-6 [&>li]:my-2">
             <li className="">
-              <span>디자인 시스템과 아토믹 디자인 패턴을 적용한 풀스택 개발 경험이 있습니다.</span>
+              <span>디자인 시스템과 아토믹 디자인 패턴을 적용한 개발 경험이 있습니다.</span>
             </li>
             <li className="">
               <span className="">
