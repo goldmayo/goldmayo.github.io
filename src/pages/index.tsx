@@ -17,14 +17,14 @@ const IndexPage: React.FC<PageProps> = () => {
     <div className="max-w-[1100px] mx-auto py-0 px-8">
       <header className="mt-4 mb-8">
         <div className="flex items-center justify-between">
-          <a href="/" className="mr-auto mobile:text-headline3 text-headline2">
+          <a href="/" className="mr-auto mobile:text-headline4 text-headline3">
             <h1>
               <span className="text-primary ">&lt;</span>
               <span className="font-semibold text-headline ">HyunSJ</span>
               <span className="text-primary ">&#47;&gt;</span>
             </h1>
           </a>
-          <nav className="text-headline3 mobile:text-subtitle2">
+          <nav className="text-headline4 tablet:text-subtitle2 mobile:text-subtitle2 ">
             <ul className="flex ">
               <li className="px-2 py-1">
                 <a href=""></a>
@@ -43,7 +43,9 @@ const IndexPage: React.FC<PageProps> = () => {
         </div>
       </header>
       <main className="flex flex-col gap-12">
-        <h1 className="mx-auto text-headline2 mobile:text-headline3">📋 현승재 | 성장하고 싶은 개발자</h1>
+        <h1 className="self-center text-headline2 mobile:text-headline4 tablet:text-headline3">
+          📋 현승재 | 성장하고 싶은 개발자
+        </h1>
 
         <section className="text-body mobile:text-small">
           <p className="p-4 my-2 rounded-md bg-stone-200">
@@ -69,7 +71,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <hr />
 
         <section>
-          <h2 className="my-3 font-semibold text-orange-600 text-headline3">Contact</h2>
+          <h2 className="my-3 font-semibold text-orange-600 text-headline4">Contact</h2>
           <ul className="flex flex-col gap-2">
             <li className="">
               <a href="mailto:dudtod1596@gmail.com">📧 dudtod1596@gmail.com</a>
@@ -84,7 +86,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </section>
         <hr />
         <section>
-          <h2 className="my-3 font-semibold text-orange-600 text-headline3">Introduce.</h2>
+          <h2 className="my-3 font-semibold text-orange-600 text-headline4">Introduce.</h2>
           <ul className="px-2 ml-6 list-disc list-inside -indent-6 [&>li]:my-2">
             <li className="">
               <span>디자인 시스템과 아토믹 디자인 패턴을 적용한 개발 경험이 있습니다.</span>
@@ -106,7 +108,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </section>
         <hr />
         <section>
-          <h2 className="my-3 font-semibold text-orange-600 text-headline3">Skill.</h2>
+          <h2 className="my-3 font-semibold text-orange-600 text-headline4">Skill.</h2>
           <section>
             <h3 className="px-1 py-1 font-semibold bg-amber-100 text-subtitle2">Language</h3>
             <ul className="flex p-2 ml-6 list-disc list-inside -indent-6">
@@ -174,7 +176,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </section>
         <hr />
         <section className="flex flex-col gap-8">
-          <h2 className="my-3 font-semibold text-orange-600 text-headline3">Project Experience.</h2>
+          <h2 className="my-3 font-semibold text-orange-600 text-headline4">Project Experience.</h2>
           <article className="flex flex-col gap-3">
             <h2 className="font-semibold text-subtitle mobile:text-subtitle2 text-secondary">
               <a href="https://github.com/goldmayo/allcamp-graphql-client">
@@ -367,7 +369,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </section>
         <hr />
         <section>
-          <h2 className="my-3 font-semibold text-orange-600 text-headline3">Education.</h2>
+          <h2 className="my-3 font-semibold text-orange-600 text-headline4">Education.</h2>
           <div className="flex flex-col gap-2">
             <p className="">
               <strong>한양대학교 ERICA (2014.03 ~ 2021.08)</strong>
@@ -381,7 +383,7 @@ const IndexPage: React.FC<PageProps> = () => {
       </main>
       <footer className="flex flex-col gap-4 p-8">
         <div className="flex flex-wrap items-center justify-around">
-          <a href="/" className=" text-headline3">
+          <a href="/" className=" text-headline4">
             <span className="text-primary ">&lt;</span>
             <span className="font-semibold text-headline ">HyunSJ</span>
             <span className="text-primary ">&#47;&gt;</span>

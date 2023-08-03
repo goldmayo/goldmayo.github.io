@@ -17,7 +17,8 @@ module.exports = {
     fontSize: {
       headline1: ["4rem"],
       headline2: ["2.5rem"],
-      headline3: ["1.5rem"],
+      headline3: ["2rem"],
+      headline4: ["1.5rem"],
       subtitle: ["1.5rem"],
       subtitle2: ["1.25rem"],
       body: ["1rem"],
