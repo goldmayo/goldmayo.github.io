@@ -34,6 +34,7 @@ module.exports = {
         primary: "#00E1A6",
         secondary: "#FF526F",
         tertiary: "#F8F7F9",
+        link: "#5e87c9",
         headline: "#00214D",
         text: "#00214D",
         paragraph: "#1B2E46",
