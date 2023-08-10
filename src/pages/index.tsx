@@ -19,9 +19,7 @@ const IndexPage: React.FC<PageProps> = () => {
   });
   return (
     <Layout>
-      <Header />
       <Main />
-      <Footer />
     </Layout>
   );
 };

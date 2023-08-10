@@ -22,6 +22,12 @@ const config: GatsbyConfig = {
         path: `${__dirname}/contents/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "your-website-bucket",
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // {
