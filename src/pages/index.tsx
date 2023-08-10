@@ -10,6 +10,7 @@ import Main from "@components/Main";
 export const Head: HeadFC = () => (
   <>
     <title>현승재 | 프론트엔드 개발자</title>
+    <link rel="icon" href="/favicon/favicon.ico" />
   </>
 );
 
