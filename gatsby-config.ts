@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `My Tech Blog`,
+    title: `현승재 테크블로그`,
     siteUrl: `https://www.yourdomain.tld`,
     description: `seungjai hyun's study & tech blog for development`,
     author: `@SeungJai Hyun`,
@@ -13,18 +13,31 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-postcss",
-    // `gatsby-plugin-image`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `images`,
-    //     path: `${__dirname}/contents/images`,
-    //   },
-    // },
-
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/contents`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/assets/images/favicon.png',
+      },
+    },
+    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/contents/`,
+      },
+    },
+    `gatsby-transformer-sharp`,
   ],
 };
 
