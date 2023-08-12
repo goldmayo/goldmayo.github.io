@@ -1,6 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
 
-
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `현승재 테크블로그`,
@@ -13,7 +12,6 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    // `gatsby-plugin-graphql-codegen`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,

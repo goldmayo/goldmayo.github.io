@@ -3,7 +3,6 @@ import React from "react";
 import Layout from "@components/layout/Layout";
 import Seo from "@components/Seo";
 
-// const Categories: React.FC<PageProps<DataProps>> = () => {
 const Categories: React.FC<PageProps<Queries.CategoriesQuery>> = ({ data, location }) => {
   const categories = data.allMdx.group;
   return (

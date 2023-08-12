@@ -15,6 +15,7 @@ const BlogPost: FC<PageProps<Queries.BlogPostQuery, Queries.BlogPostQueryVariabl
         <>
           <h2>{data.mdx?.frontmatter?.title}</h2>
           <small>{data.mdx?.frontmatter?.date}</small>
+          <br />
           {children}
         </>
       )}
