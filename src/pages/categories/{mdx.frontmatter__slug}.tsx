@@ -9,12 +9,15 @@ const BlogPost: FC<PageProps<Queries.BlogPostQuery, Queries.BlogPostQueryVariabl
   pageContext,
   children,
 }) => {
+  const { title, date } = data.mdx?.frontmatter as { title: string; date: string };
   return (
     <Layout>
       {data.mdx?.frontmatter && (
         <>
-          <h2>{data.mdx?.frontmatter?.title}</h2>
-          <small>{data.mdx?.frontmatter?.date}</small>
+          <h2>{title}</h2>
+          <small>{date}</small>
+          {/* <h2>{data.mdx?.frontmatter?.title}</h2>
+          <small>{data.mdx?.frontmatter?.date}</small> */}
           <br />
           {children}
         </>
