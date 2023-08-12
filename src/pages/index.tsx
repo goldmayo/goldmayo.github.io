@@ -11,6 +11,7 @@ const IndexPage: React.FC<PageProps> = () => {
     </Layout>
   );
 };
+
 export const Head: HeadFC = () => <Seo title={"현승재 | 프론트엔드개발자"} description={""} children={undefined} />;
 
 export default IndexPage;
