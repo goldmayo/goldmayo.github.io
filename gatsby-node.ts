@@ -21,26 +21,68 @@ exports.onCreateWebpackConfig = ({
 }
 
 export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions, reporter }) => {
+    const { createPage } = actions
+    const postQueryResult = await graphql<Queries.AllBlogPostQuery>(`
+        query AllBlogPost {
+            allMdx {
+                nodes {
+                  id
+                  frontmatter {
+                    title
+                    slug
+                  }
+                  internal {
+                    contentFilePath
+                  }
+                }
+              }
+        }
+    `)
+
+    if (postQueryResult.errors) {
+        reporter.panicOnBuild('Error loading MDX result', postQueryResult.errors)
+    }
+    const posts = postQueryResult.data?.allMdx?.nodes
+    const postsTemplatePath = path.resolve("./src/templates/PostTemplate.tsx");
+
+    posts?.forEach(node => {
+        createPage({
+            path: `/categories/${node.frontmatter?.slug!}`,
+            component: `${postsTemplatePath}?__contentFilePath=${node.internal.contentFilePath}`,
+            context: { id: node.id }
+        })
+    });
+
     const result = await graphql<Queries.CategoriesQuery>(`
         query Categories {
             allMdx(limit: 2000, sort: { frontmatter: { date: DESC } }) {
-              group(field: { frontmatter: { categories: SELECT } }) {
+              group(field: { frontmatter: { category: SELECT } }) {
                 fieldValue
                 totalCount
               }
+              nodes {
+                id
+                frontmatter {
+                  title
+                  date
+                  slug
+                  category
+                }
+                excerpt(pruneLength: 400)
+              }
             }
           }
-    `)
+          `)
 
     if (result.errors || !result.data) {
         reporter.panicOnBuild(`Error at create category page while running GraphQL query`)
         return
     }
 
-    const categoryTemplatePath = path.resolve("src/templates/CategoryTemplate.tsx");
+    const categoryTemplatePath = path.resolve("./src/templates/CategoryTemplate.tsx");
 
-    result.data.allMdx.group?.forEach((category) => {
-        actions.createPage({
+    result.data.allMdx?.group?.forEach((category) => {
+        createPage({
             path: `/categories/${category.fieldValue}`,
             component: categoryTemplatePath,
             context: { category: category.fieldValue }

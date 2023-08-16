@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
+import { resolve } from "path";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -16,10 +17,46 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 600,
+              wrapperStyle: "margin-bottom:8px;",
+              disableBgImageOnAlpha: true
+            },
+          },
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              // 인라인 코드 블록 (`code`) 에는 별도의 하이라이팅을 하지 않겠다는 설정
+              noInlineHighlight: true,
+            },
+          }
+        ],
+      }
+    },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/pages/categories`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `posts`,
+        name: `contents`,
         path: `${__dirname}/contents`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
     {
@@ -28,16 +65,7 @@ const config: GatsbyConfig = {
         icon: 'src/assets/images/favicon.png',
       },
     },
-    `gatsby-plugin-mdx`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/contents/`,
-      },
-    },
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
   ],
 };
 

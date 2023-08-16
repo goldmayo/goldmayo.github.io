@@ -1,3 +1,4 @@
+import CategoryBox from "@components/CategoryBox";
 import Seo from "@components/Seo";
 import Layout from "@components/layout/Layout";
 import { HeadFC, Link, PageProps, graphql } from "gatsby";
@@ -7,21 +8,31 @@ const CategoryTemplate: FC<PageProps<Queries.CategoriesItemQuery, Queries.Catego
   data,
   location,
   pageContext,
+  children,
 }) => {
   const { edges, totalCount } = data.allMdx;
   const { category } = pageContext;
   return (
     <Layout>
-      <h2>
-        {category}({totalCount})
+      <h2 className="mx-auto mb-3 font-bold text-center text-headline4">
+        {category?.toUpperCase()}({totalCount})
       </h2>
-      <ul>
+      <ul className="flex flex-col gap-4">
         {edges.map((item) => (
           <li key={item.node.id}>
-            <Link to={`/categories/${item.node.frontmatter?.slug}`}>{item.node.frontmatter?.title}</Link>
+            <CategoryBox
+              data={{
+                title: item.node.frontmatter?.title!,
+                category: item.node.frontmatter?.category as string[],
+                date: item.node.frontmatter?.date!,
+                slug: item.node.frontmatter?.slug!,
+                excerpt: item.node.excerpt!,
+              }}
+            />
           </li>
         ))}
       </ul>
+      {children}
     </Layout>
   );
 };
@@ -35,7 +46,7 @@ export const categoryTemplatePageQuery = graphql`
     allMdx(
       limit: 1000
       sort: { frontmatter: { date: ASC } }
-      filter: { frontmatter: { categories: { in: [$category] } } }
+      filter: { frontmatter: { category: { in: [$category] } } }
     ) {
       totalCount
       edges {
@@ -44,7 +55,10 @@ export const categoryTemplatePageQuery = graphql`
           frontmatter {
             title
             slug
+            date
+            category
           }
+          excerpt(pruneLength: 300)
         }
       }
     }

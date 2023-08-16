@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    `./src/pages/**/*.{js,jsx,ts,tsx}`,
-    `./src/components/**/*.{js,jsx,ts,tsx}`,
-    `./src/templates/**/*.{js,jsx,ts,tsx}`,
+    `./src/pages/**/*.{js,jsx,ts,tsx,md,mdx}`,
+    `./src/components/**/*.{js,jsx,ts,tsx,md,mdx}`,
+    `./src/templates/**/*.{js,jsx,ts,tsx,md,mdx}`,
+    `./contents/**/*.{js,jsx,ts,tsx,md,mdx}`,
   ],
   darkMode: "class",
   theme: {
@@ -25,9 +26,9 @@ module.exports = {
       small: ["0.875rem"],
       button: ["0.625rem"],
     },
-    fontFamily: {
-      roboto: ["Roboto", "sans-serif"],
-    },
+    // fontFamily: {
+    //   roboto: ["Roboto", "sans-serif"],
+    // },
     extend: {
       spacing: {},
       colors: {
