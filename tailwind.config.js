@@ -16,8 +16,8 @@ module.exports = {
       ultra: { min: "1920px" },
     },
     fontSize: {
-      headline1: ["4rem"],
-      headline2: ["2.5rem"],
+      headline1: ["3rem"],
+      headline2: ["2.25rem"],
       headline3: ["2rem"],
       headline4: ["1.5rem"],
       subtitle: ["1.5rem"],
