@@ -142,7 +142,7 @@
   <span class="token keyword">return</span> foo <span class="token operator">+</span> bar<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div></span>
 <p class="mb-4 leading-relaxed desktop:text-body text-small">바벨의 컴파일 과정은 3단계로 구분됩니다.</p>
-<h6 class="my-3 font-semibold desktop:text-body laptop::text-small tablet:text-small mobile:text-button">1 단계: 파싱(Parsing)</h6>
+<h5 class="my-3 font-semibold desktop:text-subtitle2 laptop:text-body text-small">1 단계: 파싱(Parsing)</h5>
 <p class="mb-4 leading-relaxed desktop:text-body text-small">소스 코드를 추상 구문 트리 (AST)로 변환하는 과정을 수행합니다.</p>
 <p class="mb-4 leading-relaxed desktop:text-body text-small">컴파일러에서 자료 구조로 사용되며 컴파일러의 syntax parsing 단계의 트리로 표현된 결과물입다. @babel/parser(aka. bablyon)의 parse 함수를 사용하여 AST로 파싱 할 수 있습니다.</p>
 <p class="mb-4 leading-relaxed desktop:text-body text-small">AST는 소스코드의 각 구문과 각 코드간의 관계를 모두 서술하고 있습니다.</p>
@@ -182,7 +182,7 @@
         <span class="token punctuation">]</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div></span>
-<h6 class="my-3 font-semibold desktop:text-body laptop::text-small tablet:text-small mobile:text-button">2 단계: 변환(Transformation)</h6>
+<h5 class="my-3 font-semibold desktop:text-subtitle2 laptop:text-body text-small">2 단계: 변환(Transformation)</h5>
 <p class="mb-4 leading-relaxed desktop:text-body text-small">1단계에서 파싱한 AST를 각 브라우저 환경에 맞는 결과로 변환하는 작업을 수행합니다</p>
 <p class="mb-4 leading-relaxed desktop:text-body text-small">이 단계에서 plugin 또는 preset(plugin 배열)에 의해 처리됩니다. 이때 사용되는 plugin들은 @babel/traverse을 사용하여 AST를 순회하는 과정에서 각 부분들이 어떻게 변환되고 정의 되어야 하는지를 기록합니다.</p>
 <p class="mb-4 leading-relaxed desktop:text-body text-small">새롭게 생성된 AST입니다.</p>
@@ -238,7 +238,7 @@
         <span class="token punctuation">]</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div></span>
-<h6 class="my-3 font-semibold desktop:text-body laptop::text-small tablet:text-small mobile:text-button">3 단계: 코드생성(Generation)</h6>
+<h5 class="my-3 font-semibold desktop:text-subtitle2 laptop:text-body text-small">3 단계: 코드생성(Generation)</h5>
 <p class="mb-4 leading-relaxed desktop:text-body text-small">2단계에서 생성한 새로운 AST를 바탕으로 @babel/generator를 통하여 실제 브라우저 환경에 맞는 소스코드로 변환하는 과정이 이뤄집니다.</p>
 <p class="mb-4 leading-relaxed desktop:text-body text-small">트랜스파일 과정을 그림으로 표현하면 아래와 같습니다.
 <span><span
@@ -486,6 +486,6 @@
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-bfe01fc83c3819ba9a96.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-aa795b3bfdf2877d6442.js\"],\"component---src-pages-categories-index-tsx\":[\"/component---src-pages-categories-index-tsx-c9dc43b1100ed7deba50.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-a5961fc499cc515f030d.js\"],\"component---src-templates-category-template-tsx\":[\"/component---src-templates-category-template-tsx-6d401a885de762e12ce7.js\"],\"component---src-templates-post-template-tsx-content-file-path-contents-babel-polyfill-ts-index-mdx\":[\"/component---src-templates-post-template-tsx-content-file-path-contents-babel-polyfill-ts-index-mdx-809847bf37cb389562c5.js\"],\"component---src-templates-post-template-tsx-content-file-path-contents-javascript-test-post-1-mdx\":[\"/component---src-templates-post-template-tsx-content-file-path-contents-javascript-test-post-1-mdx-636dae4b249f5642a225.js\"],\"component---src-templates-post-template-tsx-content-file-path-contents-tailwindcss-test-post-1-mdx\":[\"/component---src-templates-post-template-tsx-content-file-path-contents-tailwindcss-test-post-1-mdx-ce7052cfb5bfd8ecaadb.js\"],\"component---src-templates-post-template-tsx-content-file-path-contents-typescript-test-post-1-mdx\":[\"/component---src-templates-post-template-tsx-content-file-path-contents-typescript-test-post-1-mdx-bdbe9c7cc58390da6677.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-bfe01fc83c3819ba9a96.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-aa795b3bfdf2877d6442.js\"],\"component---src-pages-categories-index-tsx\":[\"/component---src-pages-categories-index-tsx-c9dc43b1100ed7deba50.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-a5961fc499cc515f030d.js\"],\"component---src-templates-category-template-tsx\":[\"/component---src-templates-category-template-tsx-6d401a885de762e12ce7.js\"],\"component---src-templates-post-template-tsx-content-file-path-contents-babel-polyfill-ts-index-mdx\":[\"/component---src-templates-post-template-tsx-content-file-path-contents-babel-polyfill-ts-index-mdx-fd2db7c8a6de9a84e0f9.js\"],\"component---src-templates-post-template-tsx-content-file-path-contents-javascript-test-post-1-mdx\":[\"/component---src-templates-post-template-tsx-content-file-path-contents-javascript-test-post-1-mdx-636dae4b249f5642a225.js\"],\"component---src-templates-post-template-tsx-content-file-path-contents-tailwindcss-test-post-1-mdx\":[\"/component---src-templates-post-template-tsx-content-file-path-contents-tailwindcss-test-post-1-mdx-ce7052cfb5bfd8ecaadb.js\"],\"component---src-templates-post-template-tsx-content-file-path-contents-typescript-test-post-1-mdx\":[\"/component---src-templates-post-template-tsx-content-file-path-contents-typescript-test-post-1-mdx-bdbe9c7cc58390da6677.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="3e38dd16b1b8a1d115ec";</script><script src="/webpack-runtime-62f74d97a2759699e6aa.js" async></script><script src="/framework-3f8b446c47726fbdfdce.js" async></script><script src="/app-bfe01fc83c3819ba9a96.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="ee297baac8d80dcad5ff";</script><script src="/webpack-runtime-2c4b95784afdc8ca91a1.js" async></script><script src="/framework-3f8b446c47726fbdfdce.js" async></script><script src="/app-bfe01fc83c3819ba9a96.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
