@@ -26,10 +26,10 @@ module.exports = {
       small: ["0.875rem"],
       button: ["0.625rem"],
     },
-    // fontFamily: {
-    //   roboto: ["Roboto", "sans-serif"],
-    // },
     extend: {
+      // fontFamily: {
+
+      // },
       spacing: {},
       colors: {
         primary: "#00E1A6",

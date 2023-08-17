@@ -16,7 +16,7 @@ const CategoryBox: FC<ICategoryBoxProps> = (props) => {
   return (
     <article className="grid grid-cols-4">
       <Link
-        className="col-start-2 col-end-5 pl-3 mb-3 font-semibold w-fit text-subtitle2 hover:text-primary-dark"
+        className="col-start-2 col-end-5 pl-3 mb-3 font-semibold w-fit text-subtitle2 hover:text-primary-dark active:text-yellow-600"
         to={`/categories/${data.slug}`}
       >
         {data.title}
@@ -27,7 +27,7 @@ const CategoryBox: FC<ICategoryBoxProps> = (props) => {
         {data.category.map((el) => (
           <div className="flex flex-col items-end gap-2 mt-1">
             <Link
-              className="rounded-sm border-[1px] py-1 px-2 w-fit border-primary-dark text-primary-dark hover:text-mono-white hover:bg-primary-dark "
+              className="rounded-sm border-[1px] py-1 px-2 w-fit border-primary-dark text-primary-dark hover:text-mono-white hover:bg-primary-dark active:bg-yellow-500 "
               to={`/categories/${data.category}`}
             >
               {el.toUpperCase()}
@@ -39,7 +39,7 @@ const CategoryBox: FC<ICategoryBoxProps> = (props) => {
         <p className="mb-3 text-transparent bg-clip-text bg-gradient-to-b from-paragraph to-transparent line-clamp-5 text-small">
           {data.excerpt}
         </p>
-        <div className="flex items-center hover:text-primary-dark">
+        <div className="flex items-center hover:text-primary-dark active:text-yellow-600">
           <Link className="font-semibold text-small" to={`/categories/${data.slug}`}>
             read more
           </Link>
